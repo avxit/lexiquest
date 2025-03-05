@@ -1,1 +1,1 @@
-<h1>Welcome to Supabase!</h1>
+<h1>Welcome to Lexiquest!</h1>

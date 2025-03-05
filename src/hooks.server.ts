@@ -73,7 +73,9 @@ const authGuard: Handle = async ({ event, resolve }) => {
 	const routeIdFirstSegment = event.route.id?.split('/')[1] ?? '';
 
 	if (!event.locals.session && protectedRoutes.has(routeIdFirstSegment)) {
-		redirect(303, '/auth');
+		const redirectTo = event.url.pathname + event.url.search;
+
+		redirect(303, `/auth?redirect_to=${redirectTo}`);
 	}
 
 	return resolve(event);
