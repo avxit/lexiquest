@@ -1,4 +1,14 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"auth": {
+		"dont_have_an_account": "Don't have an account? Good luck!",
+		"subtitle": "Login with your account",
+		"title": "Welcome back"
+	},
+	"common": {
+		"app_name": "lexiquest",
+		"email": "Email",
+		"login": "Login",
+		"password": "Password"
+	}
 }

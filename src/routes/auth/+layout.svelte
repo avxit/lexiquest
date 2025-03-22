@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from '@/paraglide/messages';
 	import { GalleryVerticalEnd } from 'lucide-svelte';
 
 	let { children } = $props();
@@ -12,7 +13,7 @@
 			>
 				<GalleryVerticalEnd class="size-4" />
 			</div>
-			Acme Inc.
+			{m['common.app_name']()}
 		</a>
 		{@render children()}
 	</div>

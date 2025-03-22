@@ -1,4 +1,4 @@
-import { redirect } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 
 import type { Actions, PageServerLoad } from './$types';
 
@@ -22,7 +22,8 @@ export const actions: Actions = {
 
 		if (error) {
 			console.error(error);
-			redirect(303, '/auth/error');
+
+			return fail(400, { error: true, fieldValues: { email }, message: error.message });
 		} else {
 			redirect(303, redirectTo);
 		}

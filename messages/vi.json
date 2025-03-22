@@ -1,4 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Chào, {name} từ vi!"
+	"common": {
+		"app_name": "lexiquest"
+	}
 }
