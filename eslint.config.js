@@ -18,6 +18,7 @@ export default ts.config(
 	...svelte.configs.recommended,
 	prettier,
 	...svelte.configs.prettier,
+	perfectionist.configs['recommended-alphabetical'],
 	{
 		languageOptions: {
 			globals: {
@@ -28,7 +29,7 @@ export default ts.config(
 	},
 	{
 		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
-		ignores: ['eslint.config.js', 'svelte.config.js'],
+		ignores: ['eslint.config.js', 'svelte.config.js', '**/*.gen.ts'],
 		languageOptions: {
 			parserOptions: {
 				extraFileExtensions: ['.svelte'],
@@ -38,7 +39,6 @@ export default ts.config(
 			}
 		}
 	},
-	perfectionist.configs['recommended-alphabetical'],
 	{
 		rules: {
 			'perfectionist/sort-imports': [
@@ -62,6 +62,6 @@ export default ts.config(
 		}
 	},
 	{
-		ignores: ['**/*.gen.*']
+		ignores: ['**/*.gen.ts']
 	}
 );
