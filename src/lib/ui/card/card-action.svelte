@@ -11,8 +11,8 @@
 
 <div
 	bind:this={ref}
-	class={cn('text-muted-foreground text-sm', className)}
-	data-slot="card-description"
+	class={cn('col-start-2 row-span-2 row-start-1 self-start justify-self-end', className)}
+	data-slot="card-action"
 	{...rest}
 >
 	{@render children?.()}

@@ -3,7 +3,7 @@
 
 	import '../app.css';
 
-	let { data, children } = $props();
+	let { children, data } = $props();
 	let { session, supabase } = $derived(data);
 
 	$effect(() => {

@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { cn } from '$lib/ui/utils';
 	import type { WithElementRef } from 'bits-ui';
 	import type { SvelteHTMLElements } from 'svelte/elements';
+
+	import { cn } from '$lib/ui/utils';
 
 	type Props = WithElementRef<SvelteHTMLElements['div']>;
 
@@ -9,9 +10,9 @@
 </script>
 
 <div
+	bind:this={ref}
 	class={cn('leading-none font-semibold', className)}
 	data-slot="card-title"
-	bind:this={ref}
 	{...rest}
 >
 	{@render children?.()}

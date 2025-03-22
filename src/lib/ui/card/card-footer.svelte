@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { cn } from '$lib/ui/utils';
 	import type { WithElementRef } from 'bits-ui';
 	import type { SvelteHTMLElements } from 'svelte/elements';
+
+	import { cn } from '$lib/ui/utils';
 
 	type Props = WithElementRef<SvelteHTMLElements['div']>;
 
@@ -9,9 +10,9 @@
 </script>
 
 <div
-	class={cn('flex items-center px-6', className)}
-	data-slot="card-footer"
 	bind:this={ref}
+	class={cn('flex items-center px-6 [.border-t]:pt-6', className)}
+	data-slot="card-footer"
 	{...rest}
 >
 	{@render children?.()}

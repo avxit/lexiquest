@@ -57,7 +57,11 @@ export default ts.config(
 					],
 					internalPattern: ['^$.+']
 				}
-			]
+			],
+			'svelte/sort-attributes': 'error'
 		}
+	},
+	{
+		ignores: ['**/*.gen.*']
 	}
 );
