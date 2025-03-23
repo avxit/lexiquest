@@ -3,7 +3,7 @@
 
 	let props: DialogRootProps = $props();
 
-  // We can't pass data-slot="sheet" to the Dialog.Root
+	// We can't pass data-slot="sheet" to the Dialog.Root
 </script>
 
 <Dialog.Root {...props} />
